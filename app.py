@@ -320,7 +320,10 @@ def _color_score_df(df: pd.DataFrame) -> pd.DataFrame:
         color = _score_text_color(v)
         return f"background-color: {bg}; color: {color}; font-weight: 600;"
 
-    return df.style.applymap(highlight_score, subset=["quality_score"])
+    try:
+        return df.style.map(highlight_score, subset=["quality_score"])
+    except AttributeError:
+        return df.style.applymap(highlight_score, subset=["quality_score"])
 
 
 # ── Sidebar ────────────────────────────────────────────────────────────────────
