@@ -45,49 +45,56 @@ html, body, [class*="css"] {
     font-family: 'Inter', system-ui, sans-serif;
 }
 
-/* ── Background ── */
+/* ── Force Deep Slate Dark Theme ── */
+.stApp {
+    background-color: #0f172a !important;
+}
+/* Ensure default text is white */
+.stApp p, .stApp span, .stApp div, .stApp label {
+    color: #f8fafc;
+}
+/* But keep headers visible */
+.stApp h1, .stApp h2, .stApp h3 {
+    color: #ffffff !important;
+}
+
+/* ── Spacing & Layout ── */
 .main .block-container {
     padding-top: 2rem;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 }
 
 /* ── Hero header ── */
 .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1.1;
+    color: #ffffff;
     margin-bottom: 0.25rem;
 }
 .hero-subtitle {
     font-size: 1.1rem;
     color: #94a3b8;
     font-weight: 400;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 /* ── Sidebar ── */
 [data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #0f172a 0%, #1e1b4b 100%);
+    background-color: #020617 !important;
+    border-right: 1px solid #1e293b;
 }
 [data-testid="stSidebar"] * {
-    color: #e2e8f0 !important;
+    color: #cbd5e1 !important;
 }
-[data-testid="stSidebar"] .stMarkdown h1 {
-    color: #a5b4fc !important;
-}
-[data-testid="stSidebar"] .stMarkdown hr {
-    border-color: #334155 !important;
+[data-testid="stSidebar"] hr {
+    border-color: #1e293b !important;
 }
 
 /* ── Logo text ── */
 .sidebar-logo {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #818cf8, #38bdf8);
+    background: linear-gradient(135deg, #6366f1, #38bdf8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -95,21 +102,21 @@ html, body, [class*="css"] {
 
 /* ── Metric cards ── */
 .metric-card {
-    background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
-    border: 1px solid #334155;
+    background: linear-gradient(145deg, #1e1b4b 0%, #0f172a 100%);
+    border: 1px solid rgba(99, 102, 241, 0.2);
     border-radius: 16px;
     padding: 1.5rem;
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .metric-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.15);
 }
 .metric-number {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #a5b4fc;
+    color: #ffffff;
 }
 .metric-label {
     font-size: 0.85rem;
@@ -117,11 +124,12 @@ html, body, [class*="css"] {
     margin-top: 0.25rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    font-weight: 600;
 }
 .metric-delta {
     font-size: 0.8rem;
-    color: #f97316;
-    margin-top: 0.15rem;
+    color: #38bdf8;
+    margin-top: 0.25rem;
 }
 
 /* ── Grade badges ── */
@@ -131,12 +139,13 @@ html, body, [class*="css"] {
     border-radius: 9999px;
     font-weight: 700;
     font-size: 0.85rem;
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
 }
-.grade-A { background: #dcfce7; color: #166534; }
-.grade-B { background: #fef9c3; color: #854d0e; }
-.grade-C { background: #ffedd5; color: #9a3412; }
-.grade-D { background: #fee2e2; color: #991b1b; }
-.grade-F { background: #1f2937; color: #f87171; border: 1px solid #ef4444; }
+.grade-A { background: #064e3b; color: #34d399; border: 1px solid #059669; }
+.grade-B { background: #422006; color: #facc15; border: 1px solid #ca8a04; }
+.grade-C { background: #451a03; color: #fb923c; border: 1px solid #ea580c; }
+.grade-D { background: #450a0a; color: #f87171; border: 1px solid #dc2626; }
+.grade-F { background: #450a0a; color: #f87171; border: 1px solid #ef4444; }
 
 /* ── Score circle ── */
 .score-circle {
@@ -146,49 +155,56 @@ html, body, [class*="css"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 800;
     margin: 0 auto 1rem;
     border: 4px solid;
+    box-shadow: 0 0 20px rgba(255,255,255,0.05);
 }
-.score-high  { background: #dcfce7; color: #166534; border-color: #22c55e; }
-.score-mid   { background: #fef9c3; color: #854d0e; border-color: #eab308; }
-.score-low-m { background: #ffedd5; color: #9a3412; border-color: #f97316; }
-.score-low   { background: #fee2e2; color: #991b1b; border-color: #ef4444; }
+.score-high  { background: #064e3b; color: #4ade80; border-color: #22c55e; box-shadow: 0 0 15px rgba(34, 197, 94, 0.3); }
+.score-mid   { background: #422006; color: #fde047; border-color: #eab308; box-shadow: 0 0 15px rgba(234, 179, 8, 0.3); }
+.score-low-m { background: #451a03; color: #fdba74; border-color: #f97316; box-shadow: 0 0 15px rgba(249, 115, 22, 0.3); }
+.score-low   { background: #450a0a; color: #fca5a5; border-color: #ef4444; box-shadow: 0 0 15px rgba(239, 68, 68, 0.3); }
 
-/* ── Info/raw card ── */
+/* ── Before / After Layout  ── */
 .raw-card {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 1.25rem;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 1.5rem;
     height: 100%;
 }
+.raw-card * {
+    color: #cbd5e1 !important;
+}
+
 .enriched-card {
-    background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%);
-    border: 1px solid #c7d2fe;
-    border-radius: 12px;
-    padding: 1.25rem;
+    background: linear-gradient(145deg, #1e1b4b 0%, #0f172a 100%);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
     height: 100%;
+    box-shadow: 0 4px 30px rgba(139, 92, 246, 0.15);
 }
 
 /* ── Section divider ── */
 .section-header {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #e2e8f0;
+    color: #f8fafc;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #1e293b;
+    margin-top: 2rem;
 }
 
 /* ── Progress bar container ── */
 .progress-container {
-    background: #f1f5f9;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
     padding: 1.5rem;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 
 /* ── Issue item ── */
@@ -197,53 +213,56 @@ html, body, [class*="css"] {
     align-items: flex-start;
     gap: 0.5rem;
     padding: 0.35rem 0;
-    color: #dc2626;
-    font-size: 0.9rem;
+    color: #f87171 !important;
+    font-size: 0.95rem;
 }
 .issue-bullet {
     display: inline-block;
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #dc2626;
+    background: #ef4444;
     margin-top: 0.45rem;
     flex-shrink: 0;
 }
 
 /* ── Priority badge ── */
-.priority-high   { background: #fee2e2; color: #dc2626; padding: 0.2rem 0.7rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 600; }
-.priority-medium { background: #fef9c3; color: #b45309; padding: 0.2rem 0.7rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 600; }
-.priority-low    { background: #dcfce7; color: #166534; padding: 0.2rem 0.7rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 600; }
+.priority-high   { background: #450a0a; color: #fca5a5; padding: 0.2rem 0.7rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 600; border: 1px solid #ef4444; }
+.priority-medium { background: #422006; color: #fde047; padding: 0.2rem 0.7rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 600; border: 1px solid #eab308; }
+.priority-low    { background: #064e3b; color: #6ee7b7; padding: 0.2rem 0.7rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 600; border: 1px solid #10b981; }
 
 /* ── Upload box enhancement ── */
 [data-testid="stFileUploader"] {
-    border-radius: 12px !important;
+    border-radius: 16px !important;
 }
 
 /* ── Tab styling ── */
 [data-testid="stTabs"] [data-baseweb="tab-list"] {
-    gap: 0.5rem;
+    gap: 1rem;
     background: transparent;
+    border-bottom: 1px solid #1e293b;
 }
 [data-testid="stTabs"] [data-baseweb="tab"] {
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 /* ── Button ── */
 .stButton > button[kind="primary"] {
     background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
     border: none !important;
-    border-radius: 10px !important;
+    border-radius: 12px !important;
     font-weight: 600 !important;
     font-size: 1rem !important;
-    padding: 0.65rem 2rem !important;
-    transition: opacity 0.2s ease !important;
+    padding: 0.75rem 2.5rem !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3) !important;
 }
 .stButton > button[kind="primary"]:hover {
-    opacity: 0.9 !important;
-    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 25px rgba(99, 102, 241, 0.5) !important;
 }
 </style>
 """,
@@ -633,13 +652,20 @@ with tab2:
 
         # ── Row 2: Grade distribution & attribute frequency ──
         col_grade, col_attr = st.columns(2)
+        
+        import altair as alt
 
         with col_grade:
             st.markdown("### Grade Distribution")
             grade_df = pd.DataFrame.from_dict(grade_dist, orient="index", columns=["Count"])
             grade_df.index.name = "Grade"
             grade_df = grade_df.reset_index()
-            st.bar_chart(grade_df.set_index("Grade"), use_container_width=True, height=280, color="#6366f1")
+            # Premium Altair Chart
+            chart1 = alt.Chart(grade_df).mark_bar(cornerRadiusTopLeft=6, cornerRadiusTopRight=6, color="#6366f1").encode(
+                x=alt.X('Grade:N', title=None, axis=alt.Axis(grid=False, labelAngle=0, labelColor="#94a3b8", domain=False, ticks=False)),
+                y=alt.Y('Count:Q', title=None, axis=alt.Axis(grid=True, gridColor="#1e293b", gridDash=[2,2], labelColor="#94a3b8", domain=False, ticks=False))
+            ).properties(height=280)
+            st.altair_chart(chart1, use_container_width=True)
 
         with col_attr:
             st.markdown("### Missing Attribute Frequency")
@@ -650,11 +676,16 @@ with tab2:
                 )
                 attr_df.index.name = "Attribute"
                 attr_df = attr_df.reset_index()
-                st.bar_chart(attr_df.set_index("Attribute"), use_container_width=True, height=280, color="#f97316")
+                # Premium Altair Chart
+                chart2 = alt.Chart(attr_df).mark_bar(cornerRadiusTopLeft=6, cornerRadiusTopRight=6, color="#38bdf8").encode(
+                    x=alt.X('Attribute:N', title=None, sort='-y', axis=alt.Axis(grid=False, labelAngle=-45, labelColor="#94a3b8", domain=False, ticks=False)),
+                    y=alt.Y('Count:Q', title=None, axis=alt.Axis(grid=True, gridColor="#1e293b", gridDash=[2,2], labelColor="#94a3b8", domain=False, ticks=False))
+                ).properties(height=280)
+                st.altair_chart(chart2, use_container_width=True)
             else:
                 st.success("No missing attributes detected across the feed.")
 
-        st.markdown("---")
+        st.markdown("<div style='height:24px'></div>", unsafe_allow_html=True)
 
         # ── Row 3: Top 5 worst products ──
         st.markdown("### Lowest-Scoring Products")
