@@ -1,0 +1,17 @@
+# Environments
+.env
+
+# Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary scripts
+fix.py
+
+# Downloaded files
+catalogiq_enriched*.csv
+
+# OS generated files
+.DS_Store
+Thumbs.db
