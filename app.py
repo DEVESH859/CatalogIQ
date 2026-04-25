@@ -773,7 +773,7 @@ with tab3:
                 html_fields += f"""
                 <div style='margin-bottom:0.6rem;'>
                   <span style='font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em; color:#94a3b8; font-weight:600;'>{field}</span>{badge}<br>
-                  <span style='font-size:0.92rem; color:#1e293b;'>{display_val}</span>
+                  <span style='font-size:0.92rem; color:#cbd5e1;'>{display_val}</span>
                 </div>"""
 
             st.markdown(
@@ -829,8 +829,8 @@ with tab3:
                 v = str(val).strip() if str(val) not in ("nan", "") else "—"
                 html_enriched += f"""
                 <div style='margin-bottom:0.9rem;'>
-                  <span style='font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em; color:#6366f1; font-weight:700;'>{label}</span><br>
-                  <span style='font-size:0.9rem; color:#1e293b; line-height:1.5;'>{v}</span>
+                  <span style='font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em; color:#818cf8; font-weight:700;'>{label}</span><br>
+                  <span style='font-size:0.9rem; color:#e2e8f0; line-height:1.5;'>{v}</span>
                 </div>"""
 
             st.markdown(
