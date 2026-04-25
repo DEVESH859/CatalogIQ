@@ -2,14 +2,14 @@
 **AI-powered product catalogue quality inspection**  
 Built to explore how GenAI can scale supplier data validation for multi-supplier e-commerce operations.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=flat-square)](https://catalogiq.streamlit.app/)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=flat-square)](INSERT_YOUR_STREAMLIT_URL_HERE)
 [![Tech](https://img.shields.io/badge/Python-Streamlit-blue?style=flat-square)](https://streamlit.io)
 [![LLM](https://img.shields.io/badge/LLM-Gemini_2.5_Flash-orange?style=flat-square)](https://ai.google.dev)
 
 ---
 
 ## 🖥️ Live App
-**[Try CatalogIQ now →](https://catalogiq.streamlit.app/)**  
+**[Try CatalogIQ now →](INSERT_YOUR_STREAMLIT_URL_HERE)**  
 *(You will need to supply your own Google Gemini API key via the system sidebar to process data!)*
 
 ---
