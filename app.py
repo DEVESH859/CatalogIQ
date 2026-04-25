@@ -174,9 +174,7 @@ html, body, [class*="css"] {
     padding: 1.5rem;
     height: 100%;
 }
-.raw-card * {
-    color: #cbd5e1 !important;
-}
+
 
 .enriched-card {
     background: linear-gradient(145deg, #1e1b4b 0%, #0f172a 100%);
