@@ -619,15 +619,10 @@ with tab2:
         k1, k2, k3, k4 = st.columns(4)
 
         def _kpi(col, number, label, delta=""):
+            delta_html = f"<div class='metric-delta'>{delta}</div>" if delta else ""
+            html = f'<div class="metric-card"><div class="metric-number">{number}</div><div class="metric-label">{label}</div>{delta_html}</div>'
             with col:
-                st.markdown(
-                    f"""<div class="metric-card">
-                          <div class="metric-number">{number}</div>
-                          <div class="metric-label">{label}</div>
-                          {"<div class='metric-delta'>" + delta + "</div>" if delta else ""}
-                        </div>""",
-                    unsafe_allow_html=True,
-                )
+                st.markdown(html, unsafe_allow_html=True)
 
         _kpi(k1, f"{avg_score}", "Avg Quality Score", f"−{round(100 - avg_score, 1)} from perfect")
         _kpi(k2, str(total), "Total Products Analysed")
