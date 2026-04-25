@@ -18,7 +18,7 @@ Built to explore how GenAI can scale supplier data validation for multi-supplier
 
 | Upload & Score | Quality Dashboard | Before/After |
 |:---:|:---:|:---:|
-| *(Add upload.png here)* | *(Add dashboard.png here)* | *(Add comparison.png here)* |
+| ![Raw feed](screenshots/upload.png) | ![Dashboard](screenshots/dashboard.png) | ![Comparison](screenshots/comparison.png) |
 
 *Feel free to add your own screenshots to the repository and link them here!*
 
